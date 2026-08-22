@@ -91,6 +91,58 @@ footer a{color:var(--red);font-weight:700;margin:0 5px}
 .page-body p{margin-bottom:12px}
 .page-body h2{font-size:16px;font-weight:800;margin:18px 0 8px;color:var(--text)}
 .page-body ul{margin:8px 0 12px 18px}
+
+.tg-fab{
+  position:fixed;right:14px;bottom:18px;width:56px;height:56px;border-radius:50%;
+  z-index:50;display:block;padding:0;border:0;background:transparent;
+  box-shadow:0 8px 22px rgba(42,171,238,.45);
+  animation:tgShake 1.8s ease-in-out infinite;
+  transform-origin:center center;
+}
+.tg-fab svg{display:block;width:56px;height:56px}
+@keyframes tgShake{
+  0%,100%{transform:translate(0,0) rotate(0deg) scale(1)}
+  8%{transform:translate(-2px,1px) rotate(-4deg) scale(1.04)}
+  16%{transform:translate(2px,-1px) rotate(4deg) scale(1.04)}
+  24%{transform:translate(-2px,0) rotate(-3deg) scale(1.05)}
+  32%{transform:translate(2px,1px) rotate(3deg) scale(1.05)}
+  40%{transform:translate(-1px,-1px) rotate(-2deg) scale(1.03)}
+  48%{transform:translate(1px,0) rotate(2deg) scale(1.03)}
+  56%{transform:translate(0,0) rotate(0deg) scale(1)}
+  100%{transform:translate(0,0) rotate(0deg) scale(1)}
+}
+.tg-btn-3d{
+  display:inline-flex;align-items:center;gap:10px;
+  background:linear-gradient(180deg,#5BC8F5 0%,#2AABEE 55%,#1E96D1 100%);
+  color:#fff!important;font-weight:800;font-size:14px;
+  padding:11px 18px 11px 12px;border-radius:999px;
+  box-shadow:0 6px 18px rgba(42,171,238,.4), inset 0 1px 0 rgba(255,255,255,.35);
+  border:0;
+  animation:tgBtnShake 2.4s ease-in-out infinite;
+}
+.tg-btn-3d .tg-mini{width:28px;height:28px;flex-shrink:0}
+.tg-btn-3d .tg-mini svg{width:28px;height:28px;display:block}
+@keyframes tgBtnShake{
+  0%,70%,100%{transform:translateX(0) rotate(0)}
+  74%{transform:translateX(-3px) rotate(-2deg)}
+  78%{transform:translateX(3px) rotate(2deg)}
+  82%{transform:translateX(-2px) rotate(-1deg)}
+  86%{transform:translateX(2px) rotate(1deg)}
+  90%{transform:translateX(0) rotate(0)}
+}
+  50%{transform:scale(1.06);filter:drop-shadow(0 0 10px rgba(42,171,238,.55))}
+}
+.tg-btn-3d{
+  display:inline-flex;align-items:center;gap:10px;
+  background:linear-gradient(180deg,#5BC8F5 0%,#2AABEE 55%,#1E96D1 100%);
+  color:#fff!important;font-weight:800;font-size:14px;
+  padding:11px 18px 11px 12px;border-radius:999px;
+  box-shadow:0 6px 18px rgba(42,171,238,.4), inset 0 1px 0 rgba(255,255,255,.35);
+  border:0;
+}
+.tg-btn-3d .tg-mini{width:28px;height:28px;flex-shrink:0}
+.tg-btn-3d .tg-mini svg{width:28px;height:28px;display:block}
+
 </style>
 </head>
 <body>
@@ -106,7 +158,11 @@ footer a{color:var(--red);font-weight:700;margin:0 5px}
     <a href="contact.html">📞 Contact</a>
     <a href="disclaimer.html">📄 Disclaimer</a>
     <a href="privacy.html">🛡️ Privacy Policy</a>
-    <a class="join" href="https://t.me/+ZX_fECfi_SY2MGI1" target="_blank" rel="noopener">💬 Join Telegram</a>
+    <a class="join tg-btn-3d" href="https://t.me/+ZX_fECfi_SY2MGI1" target="_blank" rel="noopener" style="justify-content:center;margin-top:auto"><span class="tg-mini"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="28" height="28">
+  <defs><radialGradient id="m" cx="35%" cy="30%" r="70%"><stop offset="0%" stop-color="#5BC8F5"/><stop offset="55%" stop-color="#2AABEE"/><stop offset="100%" stop-color="#1E96D1"/></radialGradient></defs>
+  <circle cx="50" cy="50" r="48" fill="url(#m)"/>
+  <path fill="#fff" d="M22 49.5c16.5-7.2 27.5-12 33-14.4 15.7-6.5 19-7.6 21.1-7.65 0.46-.02 1.5.1 2.17.66.56.46.7 1.08.77 1.51.07.43.16 1.41.09 2.18-.8 8.4-4.25 28.8-6 38.25-0.74 4-2.77 5.34-4.55 5.47-3.87.29-6.8-2.56-10.55-5.02-5.86-3.85-9.17-6.25-14.86-10-6.57-4.33-.44-6.71 2.73-10.6 0.83-1.02 15.2-13.93 15.48-15.13.03-.15.07-.71-.26-.1-.33.13-5.55 3.53-15.66 10.36-1.48 1.02-2.82 1.51-4.01 1.48-1.32-.03-3.86-.75-5.75-1.36-2.32-.75-4.16-1.15-4-2.43.09-.67 1-1.35 2.76-2.06z"/>
+</svg></span>Join Telegram</a>
   </div>
 </div>
 
@@ -666,7 +722,11 @@ footer a{color:var(--red);font-weight:700;margin:0 5px}
   <section class="sec contact">
     <h2>Contact Us</h2>
     <p class="sub">Have questions about any listing? Reach us on Telegram for the fastest response.</p>
-    <a class="btn-red" href="https://t.me/+ZX_fECfi_SY2MGI1" target="_blank" rel="noopener">✈ Contact Here</a>
+    <a class="tg-btn-3d" href="https://t.me/+ZX_fECfi_SY2MGI1" target="_blank" rel="noopener"><span class="tg-mini"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="28" height="28">
+  <defs><radialGradient id="m" cx="35%" cy="30%" r="70%"><stop offset="0%" stop-color="#5BC8F5"/><stop offset="55%" stop-color="#2AABEE"/><stop offset="100%" stop-color="#1E96D1"/></radialGradient></defs>
+  <circle cx="50" cy="50" r="48" fill="url(#m)"/>
+  <path fill="#fff" d="M22 49.5c16.5-7.2 27.5-12 33-14.4 15.7-6.5 19-7.6 21.1-7.65 0.46-.02 1.5.1 2.17.66.56.46.7 1.08.77 1.51.07.43.16 1.41.09 2.18-.8 8.4-4.25 28.8-6 38.25-0.74 4-2.77 5.34-4.55 5.47-3.87.29-6.8-2.56-10.55-5.02-5.86-3.85-9.17-6.25-14.86-10-6.57-4.33-.44-6.71 2.73-10.6 0.83-1.02 15.2-13.93 15.48-15.13.03-.15.07-.71-.26-.1-.33.13-5.55 3.53-15.66 10.36-1.48 1.02-2.82 1.51-4.01 1.48-1.32-.03-3.86-.75-5.75-1.36-2.32-.75-4.16-1.15-4-2.43.09-.67 1-1.35 2.76-2.06z"/>
+</svg></span>Contact Here</a>
   </section>
 
   <footer>
@@ -679,11 +739,28 @@ footer a{color:var(--red);font-weight:700;margin:0 5px}
       <a href="disclaimer.html">Disclaimer</a>
       <a href="privacy.html">Privacy Policy</a>
     </p>
-    <a class="btn-red" href="https://t.me/+ZX_fECfi_SY2MGI1" target="_blank" rel="noopener">✈ Join Telegram</a>
+    <a class="tg-btn-3d" href="https://t.me/+ZX_fECfi_SY2MGI1" target="_blank" rel="noopener"><span class="tg-mini"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="28" height="28">
+  <defs><radialGradient id="m" cx="35%" cy="30%" r="70%"><stop offset="0%" stop-color="#5BC8F5"/><stop offset="55%" stop-color="#2AABEE"/><stop offset="100%" stop-color="#1E96D1"/></radialGradient></defs>
+  <circle cx="50" cy="50" r="48" fill="url(#m)"/>
+  <path fill="#fff" d="M22 49.5c16.5-7.2 27.5-12 33-14.4 15.7-6.5 19-7.6 21.1-7.65 0.46-.02 1.5.1 2.17.66.56.46.7 1.08.77 1.51.07.43.16 1.41.09 2.18-.8 8.4-4.25 28.8-6 38.25-0.74 4-2.77 5.34-4.55 5.47-3.87.29-6.8-2.56-10.55-5.02-5.86-3.85-9.17-6.25-14.86-10-6.57-4.33-.44-6.71 2.73-10.6 0.83-1.02 15.2-13.93 15.48-15.13.03-.15.07-.71-.26-.1-.33.13-5.55 3.53-15.66 10.36-1.48 1.02-2.82 1.51-4.01 1.48-1.32-.03-3.86-.75-5.75-1.36-2.32-.75-4.16-1.15-4-2.43.09-.67 1-1.35 2.76-2.06z"/>
+</svg></span>Join Telegram</a>
     <p style="margin-top:14px">© 2026 All Yono Games · Made with ♥ in India · 18+</p>
   </footer>
 </div>
-<a class="fab" href="https://t.me/+ZX_fECfi_SY2MGI1" target="_blank" rel="noopener" aria-label="Telegram">✈</a>
+<a class="tg-fab" href="https://t.me/+ZX_fECfi_SY2MGI1" target="_blank" rel="noopener" aria-label="Telegram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <radialGradient id="tgbg" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#5BC8F5"/>
+      <stop offset="55%" stop-color="#2AABEE"/>
+      <stop offset="100%" stop-color="#1E96D1"/>
+    </radialGradient>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#0b5f8a" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <circle cx="50" cy="50" r="48" fill="url(#tgbg)" filter="url(#sh)"/>
+  <path fill="#fff" d="M22 49.5c16.5-7.2 27.5-12 33-14.4 15.7-6.5 19-7.6 21.1-7.65 0.46-.02 1.5.1 2.17.66.56.46.7 1.08.77 1.51.07.43.16 1.41.09 2.18-.8 8.4-4.25 28.8-6 38.25-0.74 4-2.77 5.34-4.55 5.47-3.87.29-6.8-2.56-10.55-5.02-5.86-3.85-9.17-6.25-14.86-10-6.57-4.33-.44-6.71 2.73-10.6 0.83-1.02 15.2-13.93 15.48-15.13.03-.15.07-.71-.26-.1-.33.13-5.55 3.53-15.66 10.36-1.48 1.02-2.82 1.51-4.01 1.48-1.32-.03-3.86-.75-5.75-1.36-2.32-.75-4.16-1.15-4-2.43.09-.67 1-1.35 2.76-2.06z"/>
+</svg></a>
 <script>
 (function(){
   var d=document.getElementById('drawer');
